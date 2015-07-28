@@ -1,0 +1,28 @@
+import FWCore.ParameterSet.Config as cms
+
+defaultAK8JetParameters = cms.PSet(
+                                   jetPtLabel              = cms.InputTag("jetsAK8", "jetAK8Pt"),
+                                   jetEtaLabel             = cms.InputTag("jetsAK8", "jetAK8Eta"),
+                                   jetPhiLabel             = cms.InputTag("jetsAK8", "jetAK8Phi"),
+                                   jetMassLabel            = cms.InputTag("jetsAK8", "jetAK8Mass"),
+                                   jetEnergyLabel          = cms.InputTag("jetsAK8", "jetAK8E"),
+                                   jetFlavourLabel         = cms.InputTag("jetsAK8", "jetAK8Flavour"),
+                                   jetCSVLabel             = cms.InputTag("jetsAK8", "jetAK8CSV"),
+                                   jetJECLabel             = cms.InputTag("jetsAK8", "jetAK8jecFactor0"),
+                                   jetnHadEnergyLabel      = cms.InputTag("jetsAK8", "jetAK8neutralHadronEnergy"),
+                                   jetnEMEnergyLabel       = cms.InputTag("jetsAK8", "jetAK8neutralEmEnergy"),
+                                   jetHFHadronEnergyLabel  = cms.InputTag("jetsAK8", "jetAK8HFHadronEnergy"),
+                                   jetcHadEnergyLabel      = cms.InputTag("jetsAK8", "jetAK8chargedHadronEnergy"),
+                                   jetcEMEnergyLabel       = cms.InputTag("jetsAK8", "jetAK8chargedEmEnergy"),
+                                   jetnumDaughtersLabel    = cms.InputTag("jetsAK8", "jetAK8numberOfDaughters"),
+                                   jetcMultipLabel         = cms.InputTag("jetsAK8", "jetAK8chargedMultiplicity"),
+                                   jetYLabel               = cms.InputTag("jetsAK8", "jetAK8Y"),
+                                   jetAreaLabel            = cms.InputTag("jetsAK8", "jetAK8jetArea"),
+                                   jettau1Label            = cms.InputTag("jettau1Label"),
+                                   jettau2Label            = cms.InputTag("jettau2Label"),
+                                   jettau3Label            = cms.InputTag("jettau3Label"),
+                                   jetPrunedMassLabel      = cms.InputTag("jetAK8prunedMass"),
+                                   jetTrimmedMassLabel     = cms.InputTag("jetAK8trimmedMass") ,
+                                   jetWMassLabel           = cms.InputTag("jetAK8wMass"),
+                                   jetsoftDropMass         = cms.InputTag("jetAK8softDropMass"),
+                                   )
