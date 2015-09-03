@@ -11,6 +11,7 @@ defaultAK4JetParameters = cms.PSet(
                                    jetJECLabel             = cms.InputTag("jetsAK4", "jetAK4jecFactor0"),
                                    jetnHadEnergyLabel      = cms.InputTag("jetsAK4", "jetAK4neutralHadronEnergy"),
                                    jetnEMEnergyLabel       = cms.InputTag("jetsAK4", "jetAK4neutralEmEnergy"),
+                                   jetnMultipLabel         = cms.InputTag("jetsAK4", "jetAK4neutralMultiplicity"),
                                    jetHFHadronEnergyLabel  = cms.InputTag("jetsAK4", "jetAK4HFHadronEnergy"),
                                    jetcHadEnergyLabel      = cms.InputTag("jetsAK4", "jetAK4chargedHadronEnergy"),
                                    jetcEMEnergyLabel       = cms.InputTag("jetsAK4", "jetAK4chargedEmEnergy"),

@@ -50,6 +50,7 @@ private:
     edm::InputTag jetJEC_             ;
     edm::InputTag jetnHadEnergy_      ;
     edm::InputTag jetnEMEnergy_       ;
+    edm::InputTag jetnMultip_         ;
     edm::InputTag jetHFHadronEnergy_  ;
     edm::InputTag jetcHadEnergy_      ;
     edm::InputTag jetcEMEnergy_       ;
@@ -71,6 +72,7 @@ private:
     hfloat jetJEC            ;
     hfloat jetnHadEnergy     ;
     hfloat jetnEMEnergy      ;
+    hfloat jetnMultip        ;
     hfloat jetHFHadronEnergy ;
     hfloat jetcHadEnergy     ;
     hfloat jetcEMEnergy      ;

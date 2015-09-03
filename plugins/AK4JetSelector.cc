@@ -18,6 +18,7 @@ jetCSV_              (pars.getParameter<edm::InputTag>("jetCSVLabel")),
 jetJEC_              (pars.getParameter<edm::InputTag>("jetJECLabel")),
 jetnHadEnergy_       (pars.getParameter<edm::InputTag>("jetnHadEnergyLabel")),
 jetnEMEnergy_        (pars.getParameter<edm::InputTag>("jetnEMEnergyLabel")),
+jetnMultip_          (pars.getParameter<edm::InputTag>("jetnMultipLabel")),
 jetHFHadronEnergy_   (pars.getParameter<edm::InputTag>("jetHFHadronEnergyLabel")),
 jetcHadEnergy_       (pars.getParameter<edm::InputTag>("jetcHadEnergyLabel")),
 jetcEMEnergy_        (pars.getParameter<edm::InputTag>("jetcEMEnergyLabel")),
@@ -40,6 +41,7 @@ jetIDType_           (pars.getParameter<std::string>("jetIDType"))
     evt.getByLabel(jetJEC_ ,            jetJEC          );
     evt.getByLabel(jetnHadEnergy_ ,     jetnHadEnergy   );
     evt.getByLabel(jetnEMEnergy_,       jetnEMEnergy    );
+    evt.getByLabel(jetnMultip_,         jetnMultip      );
     evt.getByLabel(jetHFHadronEnergy_ , jetHFHadronEnergy);
     evt.getByLabel(jetcHadEnergy_,      jetcHadEnergy   );
     evt.getByLabel(jetcEMEnergy_ ,      jetcEMEnergy    );
@@ -79,7 +81,7 @@ std::vector<unsigned int>  AK4JetSelector::bsize() const{
         
         if((jetPt.product())->at(ind) < jetMinPt_) continue;
         if(fabs((jetEta.product())->at(ind)) > jetMaxEta_) continue;
-        if(!isLoose(ind))continue; // needs modification once the jet IDs are clear
+        if(!isLoose(ind))continue;
         if((jetCSV.product())->at(ind) < jetCSVCut_)continue;
         
         bJetCollection.push_back(ind);
@@ -88,7 +90,24 @@ std::vector<unsigned int>  AK4JetSelector::bsize() const{
 }
 
 
-bool AK4JetSelector::isLoose(int const & jet) const{ return true; }
+bool AK4JetSelector::isLoose(int const & jet) const{
+    
+    double NHF  = (jetnHadEnergy.product())->at(jet);
+    double NEMF = (jetnEMEnergy.product())->at(jet);
+    double CHF  = (jetcHadEnergy.product())->at(jet);
+    double CEMF = (jetcEMEnergy.product())->at(jet);
+    double CHM  = (jetcMultip.product())->at(jet);
+    double NumConst = (jetcMultip.product())->at(jet)+(jetnMultip.product())->at(jet);
+    
+    if(NHF  < 0.99  &&
+       NEMF < 0.99  &&
+       CHF  > 0     &&
+       CHM  > 0     &&
+       CEMF < 0.99  &&
+       NumConst > 1)return true;
+    
+    return false;
+}
 
 
 TLorentzVector AK4JetSelector::p4(int const & jet) const{
