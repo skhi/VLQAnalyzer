@@ -101,15 +101,15 @@ bool ElectronSelector::isTight(int const & el) const{
     // tight electron selections for barrel/endcap
     // https://twiki.cern.ch/twiki/bin/viewauth/CMS/CutBasedElectronIdentificationRun2#PHYS14_selection_alconditions
     
-    const std::pair<double,double> DETA           = std::make_pair(0.006046  , 0.007057);
-    const std::pair<double,double> DPHI           = std::make_pair(0.028092  , 0.030159);
-    const std::pair<double,double> FULL5X5        = std::make_pair(0.009947  , 0.028237);
-    const std::pair<double,double> HOVERE         = std::make_pair(0.045772  , 0.067778);
-    const std::pair<double,double> DO             = std::make_pair(0.008790  , 0.027984);
-    const std::pair<double,double> DZ             = std::make_pair(0.021226  , 0.133431);
-    const std::pair<double,double> OOEMOOP        = std::make_pair(0.020118  , 0.098919);
-    const std::pair<double,double> ISO            = std::make_pair(0.069537  , 0.078265);
-    const std::pair<double,double> HITS           = std::make_pair(1  , 1);
+    const std::pair<double,double> DETA           = std::make_pair(0.00926  ,  0.00724);
+    const std::pair<double,double> DPHI           = std::make_pair(0.0336   ,  0.0918);
+    const std::pair<double,double> FULL5X5        = std::make_pair(0.0101   ,  0.0279);
+    const std::pair<double,double> HOVERE         = std::make_pair(0.0597   ,  0.0615);
+    const std::pair<double,double> DO             = std::make_pair(0.0111   ,  0.0351);
+    const std::pair<double,double> DZ             = std::make_pair(0.0466   ,  0.417);
+    const std::pair<double,double> OOEMOOP        = std::make_pair(0.012    ,  0.00999);
+    const std::pair<double,double> ISO            = std::make_pair(0.0354   ,  0.0646);
+    const std::pair<double,double> HITS           = std::make_pair(2  , 1);
     
     if(fabs((elscEta.product())->at(el)) <= 1.479 ){
         if( fabs((eldEtaIn.product())->at(el))              > DETA.first        ) return false;
@@ -199,15 +199,15 @@ bool ElectronSelector::isLoose(int const & el) const{
     // Loose electron selections for barrel/endcap
     // https://twiki.cern.ch/twiki/bin/viewauth/CMS/CutBasedElectronIdentificationRun2#PHYS14_selection_alconditions
     
-    const std::pair<double,double> DETA           = std::make_pair(0.009277  , 0.009833 );
-    const std::pair<double,double> DPHI           = std::make_pair(0.094739  , 0.149934 );
-    const std::pair<double,double> FULL5X5        = std::make_pair(0.010331  , 0.031838 );
-    const std::pair<double,double> HOVERE         = std::make_pair(0.093068  , 0.115754 );
-    const std::pair<double,double> DO             = std::make_pair(0.035904  , 0.099266 );
-    const std::pair<double,double> DZ             = std::make_pair(0.075496  , 0.197897 );
-    const std::pair<double,double> OOEMOOP        = std::make_pair(0.189968  , 0.140662 );
-    const std::pair<double,double> ISO            = std::make_pair(0.130136  , 0.163368 );
-    const std::pair<double,double> HITS           = std::make_pair(1  , 1);
+    const std::pair<double,double> DETA           = std::make_pair(0.0105   , 0.00814);
+    const std::pair<double,double> DPHI           = std::make_pair(0.115    , 0.182);
+    const std::pair<double,double> FULL5X5        = std::make_pair(0.0103   , 0.0301);
+    const std::pair<double,double> HOVERE         = std::make_pair(0.104    , 0.0897);
+    const std::pair<double,double> DO             = std::make_pair(0.0261   , 0.118);
+    const std::pair<double,double> DZ             = std::make_pair(0.41     , 0.822);
+    const std::pair<double,double> OOEMOOP        = std::make_pair(0.102    , 0.126);
+    const std::pair<double,double> ISO            = std::make_pair(0.0893   , 0.121);
+    const std::pair<double,double> HITS           = std::make_pair(2  , 1);
         
     if(fabs((elscEta.product())->at(el)) <= 1.479 ){
         if( fabs((eldEtaIn.product())->at(el))              > DETA.first        ) return false;
