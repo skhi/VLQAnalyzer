@@ -253,7 +253,3 @@ double ElectronSelector::iso(int const & el) const{ return ((elIso03.product())-
 
 
 
-
-
-
-
