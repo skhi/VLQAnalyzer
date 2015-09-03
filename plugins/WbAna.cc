@@ -1,7 +1,7 @@
 // Original Author:  Nikoloz Skhirtladze
 //         Created:  July, 19 Feb 2015
 //
-//
+// bla
 
 
 // system include files
@@ -32,7 +32,12 @@ looseElParams_           (iConfig.getParameter<edm::ParameterSet> ("looseElParam
 ak4JetParams_            (iConfig.getParameter<edm::ParameterSet> ("ak4JetParams")),
 ak8JetParams_            (iConfig.getParameter<edm::ParameterSet> ("ak8JetParams")),
 metParams_               (iConfig.getParameter<edm::ParameterSet> ("metParams")),
-selectionParams_         (iConfig.getParameter<edm::ParameterSet> ("selectionParams"))
+selectionParams_         (iConfig.getParameter<edm::ParameterSet> ("selectionParams")),
+
+genMomID_ (iConfig.getParameter<edm::InputTag> ("genMomID")),
+genID_ (iConfig.getParameter<edm::InputTag> ("genID")),
+genStatus_ (iConfig.getParameter<edm::InputTag> ("genStatus"))
+
 {
     produces<unsigned>("ngoodAK4Jets");
     produces<unsigned>("ngoodAK8Jets");
@@ -89,6 +94,9 @@ bool WbAna::filter(edm::Event& evt, const edm::EventSetup& iSetup) {
 
     // Declare instances of objects selections
     HLTSelector hlt(hltParams_, evt);
+    
+    bool isGoodTrig = hlt.isGoodHLTPath(hltPaths_);
+  //  if(!isGoodTrig) return false;
     
     MuonSelector tightMu(tightMuParams_, evt);
     MuonSelector looseMu(looseMuParams_, evt);
@@ -147,8 +155,23 @@ bool WbAna::filter(edm::Event& evt, const edm::EventSetup& iSetup) {
     h1_["met"] -> Fill(met.pt()) ;
     
     
-
+    // Include Gen Part
     
+    Handle <vector<float>> genMom ;
+    evt.getByLabel (genMomID_ , genMom );
+    
+    Handle <vector<float>> genID ;
+    evt.getByLabel (genID_               , genID );
+    
+    Handle <vector<float>> genStatus ;
+    evt.getByLabel (genStatus_               , genStatus );
+
+
+    for(unsigned int i = 0; i < (genMom.product())->size(); ++i){
+        
+        std::cout << "mom ID " << (genMom.product())->at(i) << " genID "<<  (genID.product())->at(i) <<  " genStatus "<<  (genStatus.product())->at(i) << " ele " << tightElColl.size() << " mu " <<
+        tightMuColl.size() << endl;
+    }
 
     
     TLorentzVector lepP4;
@@ -223,7 +246,6 @@ bool WbAna::filter(edm::Event& evt, const edm::EventSetup& iSetup) {
                     h1_[name] ->Fill(ak4Jet.p4(ak4JetColl[1]).Pt());
                 
                 }
-                
             }
         }
     }
