@@ -110,6 +110,8 @@ bool WbAna::filter(edm::Event& evt, const edm::EventSetup& iSetup) {
     METSelector met(metParams_, evt);
     UserSelector mySelector(selectionParams_);
     
+    UserSelector mySelectorNew(selectionParams_);
+    
     
     // Vector collections of indexes
     uintvec tightMuColl(tightMu.size());
@@ -121,6 +123,9 @@ bool WbAna::filter(edm::Event& evt, const edm::EventSetup& iSetup) {
     uintvec ak4JetColl(ak4Jet.size());
     uintvec ak4BJetColl(ak4Jet.bsize());
     uintvec ak8JetColl(ak8Jet.size());
+    
+    h1_["ak4JetMult"] -> Fill(ak4JetColl.size()) ;
+    h1_["ak8JetMult"] -> Fill(ak8JetColl.size()) ;
 
     // apply ak4 jet and lepton cleaning
     applyAK4JetElCleaning(ak4JetColl, ak4Jet, tightEl);
@@ -130,16 +135,6 @@ bool WbAna::filter(edm::Event& evt, const edm::EventSetup& iSetup) {
     applyAK4JetElCleaning(ak4BJetColl, ak4Jet, tightEl);
     applyAK4JetMuCleaning(ak4BJetColl, ak4Jet, tightMu);
 
-    
-    
-    
-    
-    
-    
-    
-    h1_["ak4JetMult"] -> Fill(ak4JetColl.size()) ;
-    h1_["ak8JetMult"] -> Fill(ak8JetColl.size()) ;
-    
     
     h1_["ak4CJetMult"] -> Fill(ak4JetColl.size()) ;
     h1_["ak8CJetMult"] -> Fill(ak8JetColl.size()) ;
@@ -169,8 +164,8 @@ bool WbAna::filter(edm::Event& evt, const edm::EventSetup& iSetup) {
 
     for(unsigned int i = 0; i < (genMom.product())->size(); ++i){
         
-        std::cout << "mom ID " << (genMom.product())->at(i) << " genID "<<  (genID.product())->at(i) <<  " genStatus "<<  (genStatus.product())->at(i) << " ele " << tightElColl.size() << " mu " <<
-        tightMuColl.size() << endl;
+    //    std::cout << "mom ID " << (genMom.product())->at(i) << " genID "<<  (genID.product())->at(i) <<  " genStatus "<<  (genStatus.product())->at(i) << " ele " << tightElColl.size() << " mu " <<
+   //     tightMuColl.size() << endl;
     }
 
     
@@ -185,6 +180,31 @@ bool WbAna::filter(edm::Event& evt, const edm::EventSetup& iSetup) {
         }
         else{
             edm::LogError("WBAna") << " >>>> Something is wrong with lepton selection. "  ;
+        }
+        
+        TLorentzVector matchedAK8TLVec;
+        if(ak4JetColl.size() > 0){
+            
+            for(unsigned int ak4 = 0;  ak4 < ak4JetColl .size(); ak4++){
+                
+                TLorentzVector ak4tlvec = ak4Jet.p4(ak4JetColl[ak4]);
+                cout <<"ak4 jet [" << ak4 <<" ] " << " pt: " << ak4tlvec.Pt() << endl;
+            }
+            
+            bool isMatch = false;
+            double dr_min = 0.4;
+            TLorentzVector ak4tlvec = ak4Jet.p4(ak4JetColl[0]);
+            for(unsigned int ak8 = 0;  ak8 < ak8JetColl .size(); ak8++){
+                
+                TLorentzVector ak8tlvec = ak8Jet.p4(ak8JetColl[ak8]);
+                cout <<"ak8 jet [" << ak8 <<" ] " << " pt: " << ak8tlvec.Pt() << endl;
+                double dr = ak4tlvec.DeltaR(ak8tlvec);
+                if(dr < dr_min){
+                    dr_min = dr;
+                    isMatch = true;
+                    matchedAK8TLVec = ak8tlvec;
+                }
+            }
         }
         
         if(ak4BJetColl.size() > 0){
