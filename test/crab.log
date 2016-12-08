@@ -1,0 +1,225 @@
+DEBUG 2016-10-13 15:42:23,372: 	 Executing command: 'submit'
+DEBUG 2016-10-13 15:42:23,438: 	 Found CRAB cache file /uscms/home/skhi/.crab3
+DEBUG 2016-10-13 15:42:23,460: 	 Checking credentials
+DEBUG 2016-10-13 15:42:23,460: 	 Found proxy file /tmp/x509up_u49023
+DEBUG 2016-10-13 15:42:23,460: 	 Getting proxy life time left
+DEBUG 2016-10-13 15:42:23,562: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49023 -timeleft
+ output : 42936
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-13 15:42:23,664: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49023 -actimeleft
+ output : 42936
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-13 15:42:23,665: 	 Proxy valid for 11:55:36 hours
+DEBUG 2016-10-13 15:42:23,665: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2016-10-13 15:42:23,694: 	 Executing command: 'submit'
+DEBUG 2016-10-13 15:42:23,765: 	 Found CRAB cache file /uscms/home/skhi/.crab3
+DEBUG 2016-10-13 15:42:23,772: 	 Checking credentials
+DEBUG 2016-10-13 15:42:23,772: 	 Found proxy file /tmp/x509up_u49023
+DEBUG 2016-10-13 15:42:23,772: 	 Getting proxy life time left
+DEBUG 2016-10-13 15:42:23,875: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49023 -timeleft
+ output : 42936
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-13 15:42:23,977: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49023 -actimeleft
+ output : 42936
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-13 15:42:23,977: 	 Proxy valid for 11:55:36 hours
+DEBUG 2016-10-13 15:42:23,978: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2016-10-14 02:55:49,273: 	 Executing command: 'submit'
+DEBUG 2016-10-14 02:55:49,314: 	 Found CRAB cache file /uscms/home/skhi/.crab3
+DEBUG 2016-10-14 02:55:49,332: 	 Checking credentials
+DEBUG 2016-10-14 02:55:49,332: 	 Found proxy file /tmp/x509up_u49023
+DEBUG 2016-10-14 02:55:49,332: 	 Getting proxy life time left
+DEBUG 2016-10-14 02:55:49,435: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49023 -timeleft
+ output : 42574
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-14 02:55:49,538: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49023 -actimeleft
+ output : 42574
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-14 02:55:49,538: 	 Proxy valid for 11:49:34 hours
+DEBUG 2016-10-14 02:55:49,539: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2016-10-14 02:55:49,614: 	 Executing command: 'submit'
+DEBUG 2016-10-14 02:55:49,619: 	 Found CRAB cache file /uscms/home/skhi/.crab3
+DEBUG 2016-10-14 02:55:49,625: 	 Checking credentials
+DEBUG 2016-10-14 02:55:49,625: 	 Found proxy file /tmp/x509up_u49023
+DEBUG 2016-10-14 02:55:49,625: 	 Getting proxy life time left
+DEBUG 2016-10-14 02:55:49,728: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49023 -timeleft
+ output : 42574
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-14 02:55:49,831: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49023 -actimeleft
+ output : 42574
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-14 02:55:49,831: 	 Proxy valid for 11:49:34 hours
+DEBUG 2016-10-14 02:55:49,832: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2016-10-17 10:20:58,578: 	 Executing command: 'submit'
+DEBUG 2016-10-17 10:20:58,591: 	 Found CRAB cache file /uscms/home/skhi/.crab3
+DEBUG 2016-10-17 10:20:58,659: 	 Checking credentials
+DEBUG 2016-10-17 10:20:58,659: 	 Found proxy file /tmp/x509up_u49023
+DEBUG 2016-10-17 10:20:58,659: 	 Getting proxy life time left
+DEBUG 2016-10-17 10:20:58,863: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49023 -timeleft
+ output : 36118
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-17 10:20:58,966: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49023 -actimeleft
+ output : 36118
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-17 10:20:58,967: 	 Proxy valid for 10:01:58 hours
+INFO 2016-10-17 10:20:59,007: 	 Will use CRAB configuration file crab_TTBar_single_lep.py
+DEBUG 2016-10-17 10:20:59,007: 	 Loading CRAB configuration file.
+DEBUG 2016-10-17 10:20:59,101: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2016-10-17 10:20:59,147: 	 Working area '/uscms_data/d3/skhi/CMSSW_8_0_16/src/Analysis/VLQAna/test/single_lep/crab_TTBar_single_lep' already exists 
+Please change the requestName in the config file
+ERROR 2016-10-17 10:20:59,147: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 302, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 394, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/uscms_data/d3/skhi/CMSSW_8_0_16/src/Analysis/VLQAna/test/single_lep/crab_TTBar_single_lep' already exists 
+Please change the requestName in the config file
+DEBUG 2016-10-29 09:17:22,362: 	 Executing command: 'submit'
+DEBUG 2016-10-29 09:17:22,414: 	 Found CRAB cache file /uscms/home/skhi/.crab3
+DEBUG 2016-10-30 02:30:54,365: 	 Executing command: 'status'
+DEBUG 2016-10-30 02:30:54,366: 	 Found CRAB cache file /uscms/home/skhi/.crab3
+ERROR 2016-10-30 02:30:54,368: 	 Error: --verboseErrors is not a valid CRAB project directory.
+ERROR 2016-10-30 02:30:54,368: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 257, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 755, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 566, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: --verboseErrors is not a valid CRAB project directory.
+DEBUG 2016-10-30 13:15:28,952: 	 Executing command: 'status'
+DEBUG 2016-10-30 13:15:28,952: 	 Found CRAB cache file /afs/cern.ch/user/s/skhi/.crab3
+DEBUG 2016-10-30 13:15:28,958: 	 Checking credentials
+DEBUG 2016-10-30 13:15:28,959: 	 Proxy file /tmp/x509up_u52016 not found
+DEBUG 2016-10-30 13:15:28,959: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+ERROR 2016-10-30 13:35:29,029: 	 Timeout in voms-proxy-init -voms cms:/cms -valid 24:00 -rfc execution.
+DEBUG 2016-10-30 13:35:29,437: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u52016 -timeleft
+ output : 
+ error: Proxy not found: /tmp/x509up_u52016 (No such file or directory)
+
+ retcode : 1
+ERROR 2016-10-30 13:35:29,437: 	 Error while checking proxy timeleft for /tmp/x509up_u52016
+DEBUG 2016-10-30 13:35:29,741: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u52016 voms-proxy-info -fqan
+ output : 
+ error: Proxy not found: /tmp/x509up_u52016 (No such file or directory)
+
+ retcode : 1
+ERROR 2016-10-30 13:35:29,741: 	 Problems creating proxy.
+ERROR 2016-10-30 13:35:29,741: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 292, in __init__
+    self.proxyCreated = self.proxy.createNewVomsProxySimple(timeLeftThreshold = 720)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/CredentialInteractions.py", line 152, in createNewVomsProxySimple
+    raise ProxyCreationException("Problems creating proxy.")
+ProxyCreationException: Problems creating proxy.
+DEBUG 2016-10-30 15:48:03,155: 	 Executing command: 'status'
+DEBUG 2016-10-30 15:48:03,158: 	 Found CRAB cache file /afs/cern.ch/user/s/skhi/.crab3
+DEBUG 2016-10-30 15:48:03,170: 	 Checking credentials
+DEBUG 2016-10-30 15:48:03,170: 	 Proxy file /tmp/x509up_u52016 not found
+DEBUG 2016-10-30 15:48:03,170: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+ERROR 2016-10-30 15:54:06,577: 	 Keyboard Interrupted
+DEBUG 2016-11-07 17:24:08,449: 	 Executing command: 'status'
+DEBUG 2016-11-07 17:24:08,449: 	 Found CRAB cache file /afs/cern.ch/user/s/skhi/.crab3
+ERROR 2016-11-07 17:24:08,450: 	 Error: single_lep/crab_Single is not a valid CRAB project directory.
+ERROR 2016-11-07 17:24:08,450: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 257, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 755, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 566, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: single_lep/crab_Single is not a valid CRAB project directory.
+DEBUG 2016-11-08 16:06:22,642: 	 Executing command: 'status'
+DEBUG 2016-11-08 16:06:22,644: 	 Found CRAB cache file /afs/cern.ch/user/s/skhi/.crab3
+DEBUG 2016-11-08 16:06:22,654: 	 Checking credentials
+DEBUG 2016-11-08 16:06:22,654: 	 Proxy file /tmp/x509up_u52016 not found
+DEBUG 2016-11-08 16:06:22,654: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+ERROR 2016-11-08 16:06:34,245: 	 Keyboard Interrupted
+DEBUG 2016-11-14 11:36:16,216: 	 Executing command: 'status'
+DEBUG 2016-11-14 11:36:16,249: 	 Found CRAB cache file /afs/cern.ch/user/s/skhi/.crab3
+DEBUG 2016-11-14 11:36:16,313: 	 Checking credentials
+DEBUG 2016-11-14 11:36:16,313: 	 Proxy file /tmp/x509up_u52016 not found
+DEBUG 2016-11-14 11:36:16,313: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2016-11-14 11:36:21,430: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 1
+DEBUG 2016-11-14 11:36:21,935: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u52016 -timeleft
+ output : 
+ error: Proxy not found: /tmp/x509up_u52016 (No such file or directory)
+
+ retcode : 1
+ERROR 2016-11-14 11:36:21,935: 	 Error while checking proxy timeleft for /tmp/x509up_u52016
+DEBUG 2016-11-14 11:36:22,238: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u52016 voms-proxy-info -fqan
+ output : 
+ error: Proxy not found: /tmp/x509up_u52016 (No such file or directory)
+
+ retcode : 1
+ERROR 2016-11-14 11:36:22,238: 	 Problems creating proxy.
+ERROR 2016-11-14 11:36:22,239: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 292, in __init__
+    self.proxyCreated = self.proxy.createNewVomsProxySimple(timeLeftThreshold = 720)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/CredentialInteractions.py", line 152, in createNewVomsProxySimple
+    raise ProxyCreationException("Problems creating proxy.")
+ProxyCreationException: Problems creating proxy.
